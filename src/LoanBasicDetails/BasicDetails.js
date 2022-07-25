@@ -205,8 +205,8 @@ export class BasicDetails extends LocalizeMixin(LitElement) {
     </div>`;
   }
 
-  _numToWord() {
-    //  console.log(e.key)
+  _numToWord(e) {
+     console.log(e.key)
     const val = this.shadowRoot.querySelector('.amount').value;
     const num = parseFloat(val.replace(/,/g, ''));
     this.shadowRoot.querySelector('#word').innerHTML = inWords(num);
