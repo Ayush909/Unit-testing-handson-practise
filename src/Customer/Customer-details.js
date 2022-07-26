@@ -95,6 +95,7 @@ export class CustomerDetails extends LocalizeMixin(LitElement) {
     return {};
   }
 
+  
   render() {
     const today = new Date();
     const year = today.getFullYear();
@@ -116,6 +117,8 @@ export class CustomerDetails extends LocalizeMixin(LitElement) {
         return;
       }
       const formData = ev.target.serializedValue;
+
+      
       fetch('https://loanfeapi.herokuapp.com/submit-form', {
         method: 'POST',
         headers: {
